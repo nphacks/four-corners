@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <title>Guess The Word!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h1>Ready To Guess?</h1> -->
+    <h4 id="timer"></h4>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+        <!-- Row 1 -->
+        <div style="display: flex; justify-content: center;">
+          <img id="image1" class="corner-image" style="height: 150px; width: 300px; object-fit: contain;">
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <img id="image2" class="corner-image" style="height: 150px; width: 300px; object-fit: contain;">
+        </div>
+      
+        <!-- Row 2 -->
+        <div style="display: flex; justify-content: center;">
+          <img id="image3" class="corner-image" style="height: 150px; width: 300px; object-fit: contain;">
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <img id="image4" class="corner-image" style="height: 150px; width: 300px; object-fit: contain;">
+        </div>
+    </div>
+    <!-- <div id="debug-output" style="
+    color: white;
+    background: #333;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    "></div> -->
+    <pre style="font-size: 1px; visibility: hidden;" id="messageOutput"></pre>
+    <!-- <div id="output" style="margin-top: 20px;"></div> -->
+    <script type="application/javascript" src="guessscript.js"></script>
+  </body>
+</html>

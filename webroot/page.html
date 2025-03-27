@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta charset="UTF-8" />
+    <title>Make a Drawing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <h1>This is your page.html</h1> -->
+    <!-- <h3>Your word is <span id="word"></span></h3>
+    <h3>Your quarter is: <span id="quarter"></span></h3> -->
+    <!-- <div class="button-container">
+      <button id="btn-increase">Increase Counter ⬆️</button>
+      <button id="btn-decrease">Decrease Counter ⬇️</button>
+    </div> -->    
+    <div class="container">
+      <div class="information">
+        <b>Your word is <span id="word"></span></b>
+        <b>You are drawing for <span id="quarter"></span> quarter</b>
+      </div>
+      <div id="timer" style="font-size: 24px; margin: 10px 0;">Time left: 120 seconds</div>
+      <canvas id="canvas" height="300" width="600"></canvas>
+      
+
+      <div class="color-options">
+          <div class="color-option selected" style="background-color: black;" data-color="#000000"></div>
+          <div class="color-option" style="background-color: #5f5f5f;" data-color="#5f5f5f"></div>
+          <div class="color-option" style="background-color: red;" data-color="#ff0000"></div>
+          <div class="color-option" style="background-color: blue;" data-color="#0000ff"></div>
+          <div class="color-option" style="background-color: #69cef6;" data-color="#69cef6"></div>
+          <div class="color-option" style="background-color: green;" data-color="#008000"></div>
+          <div class="color-option" style="background-color: yellow;" data-color="#ffff00"></div>
+          <div class="color-option" style="background-color: purple;" data-color="#800080"></div>
+          <div class="color-option" style="background-color: orange;" data-color="#ffa500"></div>
+          <div class="color-option" style="background-color: pink;" data-color="#ffc0cb"></div>
+      </div>
+
+      <div class="brush-stroke-options">
+        <div class="brush-stroke-option b-s-option1" data-width="9"></div>
+        <div class="brush-stroke-option b-s-option2" data-width="7"></div>
+        <div class="brush-stroke-option b-s-option3" data-width="5"></div>
+        <div class="brush-stroke-option selected b-s-option4" data-width="3"></div>
+        <div class="brush-stroke-option b-s-option5" data-width="1"></div>
+      </div>
+      
+      <div class="controls">
+          <button id="btn-clear">Clear Canvas</button>
+          <button id="btn-get-image">Submit Drawing</button>
+      </div>
+    </div>
+    <pre style="font-size: 1px; visibility: hidden;" id="messageOutput"></pre>
+    <!-- <div id="output" style="margin-top: 20px;"></div> -->
+    <script type="application/javascript" src="script.js"></script>
+  </body>
+</html>
