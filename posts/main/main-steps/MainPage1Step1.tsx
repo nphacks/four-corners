@@ -58,14 +58,6 @@ export const MainPage1Step1 = (
           </vstack>
         ))}
       </hstack>
-      
-      {/* <button 
-            width={buttonWidth}
-            appearance="primary"
-            height={buttonHeight}
-            onPress={checkStrings}
-        >Print 2 random strings in console</button>
-      <button onPress={() => props.onNext('Step2')}>Next</button> */}
     </vstack>
   );
 };

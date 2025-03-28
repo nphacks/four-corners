@@ -5,7 +5,6 @@ import { PostService } from '../../../services/PostService.tsx';
  
  interface MainPage1Step2Props {
      wordData: { word: string, corner: string };
-     // onNext: (next: string) => void;
      onCancel: () => void;
  }
  
@@ -45,7 +44,6 @@ import { PostService } from '../../../services/PostService.tsx';
           });
           break;
         case 'setImageUrl':
-          // console.log('setImageUrl: ', message.data.closeWebView)
           
           let response = await appService.updateDrawingInformation(props.wordData.word, props.wordData.corner, username, message.data.newImageUrl)
           // console.log(response)
@@ -75,7 +73,6 @@ import { PostService } from '../../../services/PostService.tsx';
   async function createGuessItPost(): Promise<void> {
     const { reddit, ui } = _context;
     const subreddit = await reddit.getCurrentSubreddit();
-    // The back-end is configured to run this app's submitPost calls as the user
     const post = await _context.reddit.submitPost({
       title: 'Guess it!',
       subredditName: subreddit.name,

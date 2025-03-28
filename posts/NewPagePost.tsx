@@ -62,9 +62,7 @@ export const NewPagePost = (props: NewPagePostProps, context: Context): JSX.Elem
   }
 
   const webView = useWebView<WebViewGuessMessage, DevvitGuessMessage>({
-    // URL of your web view content
     url: 'guess.html',
-    // Handle messages sent from the web view
     async onMessage(message, webView) {
       switch (message.type) {
         case 'webViewReady':
@@ -91,6 +89,7 @@ export const NewPagePost = (props: NewPagePostProps, context: Context): JSX.Elem
       }
     },
     onUnmount() {
+      setDrawingSeen(true)
       context.ui.showToast('Drawing seen!');
     },
   });
@@ -100,6 +99,8 @@ export const NewPagePost = (props: NewPagePostProps, context: Context): JSX.Elem
       <text color='global-black' size='xxlarge' weight='bold'>Guess your answer</text>
       <spacer size='medium'/>
       <text color='global-black' size='small' weight='bold'>LOOK CAREFULLY! You will get only 15 seconds to see the drawings</text>
+      <spacer size='medium' />
+      <image url='all-corners.png' imageWidth={100} imageHeight={100} height="45%" width="40%" description='All corners drawn'/>
       <spacer size='medium'/>
       {/* <button onPress={handleComment}>Create correct comment</button> */}
       {!drawingsSeen ? <button onPress={() => {webView.mount()}}>See the drawings</button> : ''}
